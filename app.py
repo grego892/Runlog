@@ -42,7 +42,7 @@ def getSta():
         ftp = FTP()
         ftp.connect('10.68.10.50', 2121)
         ftp.login('BSIClient', 'StudioX')   
-        with FTP('10.68.10.50', user='BSIClient', passwd='StudioX') as ftp:
+        with FTP('10.68.10.50', user='******', passwd='******') as ftp:
             with open(r'.\data\FileServer Settings.xml', 'wb') as local_file:  # Open local file for writing
                 response = ftp.retrbinary('RETR FileServer Settings.xml', local_file.write)
                 print (response)
